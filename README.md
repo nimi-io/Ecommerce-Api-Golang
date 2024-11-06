@@ -223,7 +223,3 @@ These endpoints are primarily intended for basic server functionality testing.
 
 ## Conclusion
 This E-commerce API provides a simple structure for handling e-commerce operations, with robust user and admin functionalities. Make sure to test the API using the provided Postman collection to experience all features firsthand.
-
-If you have any questions or run into issues, please don't hesitate to reach out!
-
-Happy coding! 🎉
