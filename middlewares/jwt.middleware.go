@@ -27,6 +27,8 @@ func AuthMiddleware() gin.HandlerFunc {
 			c.Abort()
 			return
 		}
+ 
+
 
 		usr, _, err := help.VerifyToken(tokenString)
 		if err != nil {

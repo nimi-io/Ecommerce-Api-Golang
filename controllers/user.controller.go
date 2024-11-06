@@ -37,8 +37,8 @@ func GetUser(c *gin.Context) {
 		return
 	}
 
-	err := db.DB.QueryRow("SELECT id, username, email, created_at, updated_at FROM users WHERE id = $1", userID).
-		Scan(&fetchedUser.ID, &fetchedUser.Username, &fetchedUser.Email, &fetchedUser.CreatedAt, &fetchedUser.UpdatedAt)
+	err := db.DB.QueryRow("SELECT id, username, email, role, created_at, updated_at FROM users WHERE id = $1", userID).
+		Scan(&fetchedUser.ID, &fetchedUser.Username, &fetchedUser.Email, &fetchedUser.Role, &fetchedUser.CreatedAt, &fetchedUser.UpdatedAt)
 	if err != nil {
 		if err == sql.ErrNoRows {
 			c.JSON(http.StatusNotFound, gin.H{"error": "User not found"})

@@ -20,3 +20,4 @@ func OrderRoutes(incommingRoutes *gin.RouterGroup) {
 	orderGroup.PATCH("status/:id", mid.IsAdmin(), controllers.UpdateOrderStatus)
 
 }
+ 
